@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.hpp                                        :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 02:42:44 by abensaid          #+#    #+#             */
-/*   Updated: 2026/01/23 03:45:24 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/04/04 06:02:25 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,11 @@
 class Contact
 {
 	private:
-		std::string first_name;
-		std::string last_name;
-		std::string nickname;
-		std::string phone_nbr;
-		std::string secret;
+		std::string _first_name;
+		std::string _last_name;
+		std::string _nickname;
+		std::string _phone_nbr;
+		std::string _secret;
 
 	public:
 		void set_contact();
@@ -32,7 +32,6 @@ class Contact
 		std::string get_nickname();
 		std::string get_phone_nbr();
 		std::string get_secret();
-
 };
 
 #endif

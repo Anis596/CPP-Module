@@ -6,62 +6,62 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 02:37:35 by abensaid          #+#    #+#             */
-/*   Updated: 2026/01/24 02:23:38 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/04/04 07:49:27 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
-
+//using namespace std;
 void Contact::set_contact()
 {
-	do 
+	do
 	{
 		std::cout << "First name : ";
-		std::getline(std::cin, first_name);
-	} while (first_name == "");
+		std::getline(std::cin, _first_name);
+	} while (_first_name == "");
 	do
 	{
 		std::cout << "Last name : ";
-		std::getline(std::cin, last_name);
-	} while (last_name == "");
+		std::getline(std::cin, _last_name);
+	} while (_last_name == "");
 	do
 	{
 		std::cout << "Nickame : ";
-		std::getline(std::cin, nickname);
-	} while (nickname == "");
+		std::getline(std::cin, _nickname);
+	} while (_nickname == "");
 	do
 	{
 		std::cout << "Phone number : ";
-		std::getline(std::cin, phone_nbr);
-	} while (phone_nbr == "");
+		std::getline(std::cin, _phone_nbr);
+	} while (_phone_nbr == "");
 	do
 	{
 		std::cout << "Secret : ";
-		std::getline(std::cin, secret);
-	} while (secret.empty());
+		std::getline(std::cin, _secret);
+	} while (_secret.empty());
 }
 
 std::string Contact::get_firstName()
 {
-	return (first_name);
+	return (_first_name);
 }
 
 std::string Contact::get_lastName()
 {
-	return (last_name);
+	return (_last_name);
 }
 
 std::string Contact::get_nickname()
 {
-	return (nickname);
+	return (_nickname);
 }
 
 std::string Contact::get_phone_nbr()
 {
-	return (phone_nbr);
+	return (_phone_nbr);
 }
 
 std::string Contact::get_secret()
 {
-	return (secret);
+	return (_secret);
 }

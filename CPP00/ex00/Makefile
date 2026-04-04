@@ -1,7 +1,7 @@
-NAME		= megaphone
+NAME		= Megaphone
 CC			= c++
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
-SRC			= megaphone.cpp
+SRC			= main.cpp
 OBJ			= $(SRC:.cpp=.o)
 
 # Règle par défaut

@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/24 02:23:57 by abensaid          #+#    #+#             */
-/*   Updated: 2026/04/04 08:34:36 by abensaid         ###   ########.fr       */
+/*   Created: 2026/01/22 23:55:36 by abensaid          #+#    #+#             */
+/*   Updated: 2026/04/04 06:54:36 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_HPP
-# define PHONE_BOOK_HPP
-
-#include "Contact.hpp"
 #include <iostream>
-#include <string>
-#include <iomanip>
+#include <cctype>
 
-class PhoneBook
+int	main(int ac, char **av)
 {
-	private:
-			Contact _contacts[8];
-			int		_index;
-			std::string	format(std::string str);
-
-	public:
-		PhoneBook();
-		void	add();
-		void	search();
-};
-#endif
+	int	i = 1;
+	int	j;
+	if (ac == 1)
+	{
+		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *";
+	}
+	while (av[i])
+	{
+		j = 0;
+		while (av[i][j])
+		{
+			std::cout << (char)std::toupper(av[i][j]);
+			j++;
+		}
+		i++;
+	}
+	std::cout << std::endl;
+	return (0);
+}
+//cin = consol input
+//cout = consol output
+//<< = envoie le texte vers...
+//ex : std::cout << "test" = envoie test vers l'ecran

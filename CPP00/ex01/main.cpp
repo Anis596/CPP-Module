@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/24 02:23:57 by abensaid          #+#    #+#             */
-/*   Updated: 2026/04/04 08:34:36 by abensaid         ###   ########.fr       */
+/*   Created: 2026/04/04 06:32:08 by abensaid          #+#    #+#             */
+/*   Updated: 2026/04/04 08:44:53 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PHONE_BOOK_HPP
-# define PHONE_BOOK_HPP
-
+#include "PhoneBook.hpp"
 #include "Contact.hpp"
-#include <iostream>
-#include <string>
-#include <iomanip>
 
-class PhoneBook
+int	main()
 {
-	private:
-			Contact _contacts[8];
-			int		_index;
-			std::string	format(std::string str);
-
-	public:
-		PhoneBook();
-		void	add();
-		void	search();
-};
-#endif
+	PhoneBook ph;
+	std::string command;
+	while (1)
+	{
+		std::cout << "> ";
+		if (!std::getline(std::cin, command))
+			break;
+		if (command == "ADD")
+		ph.add();
+		else if (command == "SEARCH")
+			ph.search();
+		else if (command == "EXIT")
+			break ;
+	}
+	return (0);
+}
