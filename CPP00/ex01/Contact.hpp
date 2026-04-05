@@ -6,7 +6,7 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 02:42:44 by abensaid          #+#    #+#             */
-/*   Updated: 2026/04/04 06:02:25 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/04/05 04:41:20 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Contact
 		std::string _secret;
 
 	public:
-		void set_contact();
+		bool set_contact();
 		std::string get_firstName();
 		std::string get_lastName();
 		std::string get_nickname();

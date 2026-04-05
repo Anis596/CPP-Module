@@ -6,39 +6,45 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/23 02:37:35 by abensaid          #+#    #+#             */
-/*   Updated: 2026/04/04 07:49:27 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/04/05 04:42:31 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 //using namespace std;
-void Contact::set_contact()
+bool Contact::set_contact()
 {
 	do
 	{
 		std::cout << "First name : ";
-		std::getline(std::cin, _first_name);
+		if (!std::getline(std::cin, _first_name))
+			return (false);
 	} while (_first_name == "");
 	do
 	{
 		std::cout << "Last name : ";
-		std::getline(std::cin, _last_name);
+		if (!std::getline(std::cin, _last_name))
+			return (false);
 	} while (_last_name == "");
 	do
 	{
 		std::cout << "Nickame : ";
-		std::getline(std::cin, _nickname);
+		if (!std::getline(std::cin, _nickname))
+			return (false);
 	} while (_nickname == "");
 	do
 	{
 		std::cout << "Phone number : ";
-		std::getline(std::cin, _phone_nbr);
+		if (!std::getline(std::cin, _phone_nbr))
+			return (false);
 	} while (_phone_nbr == "");
 	do
 	{
 		std::cout << "Secret : ";
-		std::getline(std::cin, _secret);
+		if (!std::getline(std::cin, _secret))
+			return (false);
 	} while (_secret.empty());
+	return (true);
 }
 
 std::string Contact::get_firstName()

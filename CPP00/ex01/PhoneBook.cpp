@@ -6,7 +6,7 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 02:41:52 by abensaid          #+#    #+#             */
-/*   Updated: 2026/04/04 08:38:11 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/04/05 05:03:01 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ void	PhoneBook::add()
 		_index = 0;
 		pos = 0;
 	}
-	_contacts[pos].set_contact();
+	if (!_contacts[pos].set_contact())//verif pr pas incrementer index pr r
+		return ;
 	_index++;
 }
 
@@ -46,6 +47,11 @@ void	PhoneBook::search()
 	int	i;
 	int	j = 0;
 	std::string input;
+	if (_contacts[0].get_firstName().empty())
+	{
+		std::cout << "PhoneBook is empty" << std::endl;
+		return ;//verif pr ne pas etre bloquer ds put contact index
+	}
 	std::cout << "|     Index|First Name| Last Name|  Nickname|" << std::endl;
 	while (j < 8)
 	{
@@ -63,9 +69,12 @@ void	PhoneBook::search()
 	{
 		i = -1;//pr le remettre invalide a chaque tour
 		std::cout << "Put contact index : ";
-		std::getline(std::cin, input);
+		if (!std::getline(std::cin, input))//protection crtl D
+			return ;
 		if (input.length() == 1 && input[0] >= '0' && input[0] <= '7')
 			i = input[0] - '0';
+		if (i < 0 || i > 7 || _contacts[i].get_firstName().empty())
+			std::cout << "Invalid Index" << std::endl;
 	}while (i < 0 || i > 7 || _contacts[i].get_firstName().empty());
 	std::cout << "First name: " << _contacts[i].get_firstName() << std::endl;
 	std::cout << "Last name: " << _contacts[i].get_lastName() << std::endl;
