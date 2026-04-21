@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/21 00:19:10 by abensaid          #+#    #+#             */
-/*   Updated: 2026/04/22 00:14:42 by abensaid         ###   ########.fr       */
+/*   Created: 2026/04/22 00:49:58 by abensaid          #+#    #+#             */
+/*   Updated: 2026/04/22 01:15:29 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#ifndef WEAPON_H
+# define WEAPON_H
 
-int main(void)
+#include <iomanip>
+#include <string>
+#include <iostream>
+
+class Weapon
 {
-	Zombie* Horde = zombieHorde(10, "HordeZomb");
-	for (int i = 0; i < 10; i++)
-	{
-		Horde[i].announce();
-	}
-	delete[] Horde;
-	return (0);
-}
+	private :
+			std::string _type;
+	public :
+		Weapon(std::string type);
+		const std::string &getType() const;
+		void setType(std::string newType);
+};
+
+#endif

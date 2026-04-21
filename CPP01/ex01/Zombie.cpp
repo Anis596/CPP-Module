@@ -6,7 +6,7 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 00:19:12 by abensaid          #+#    #+#             */
-/*   Updated: 2026/04/21 00:25:49 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/04/21 23:33:47 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,5 +19,19 @@ Zombie::~Zombie()
 
 Zombie::Zombie(std::string name)
 {
-	
+	_name = name;
+}
+
+Zombie::Zombie()
+{
+}
+
+void Zombie::announce()
+{
+	std::cout << _name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void Zombie::setName(std::string name)
+{
+	_name = name;
 }

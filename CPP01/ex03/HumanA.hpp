@@ -1,24 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/21 00:19:10 by abensaid          #+#    #+#             */
-/*   Updated: 2026/04/22 00:14:42 by abensaid         ###   ########.fr       */
+/*   Created: 2026/04/22 00:50:08 by abensaid          #+#    #+#             */
+/*   Updated: 2026/04/22 00:50:09 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
-
-int main(void)
-{
-	Zombie* Horde = zombieHorde(10, "HordeZomb");
-	for (int i = 0; i < 10; i++)
-	{
-		Horde[i].announce();
-	}
-	delete[] Horde;
-	return (0);
-}
