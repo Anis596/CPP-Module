@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.hpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/22 00:49:58 by abensaid          #+#    #+#             */
-/*   Updated: 2026/04/22 22:25:55 by abensaid         ###   ########.fr       */
+/*   Created: 2026/04/23 03:17:31 by abensaid          #+#    #+#             */
+/*   Updated: 2026/04/23 03:25:16 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WEAPON_H
-# define WEAPON_H
+#pragma once
 
-#include <iomanip>
 #include <string>
 #include <iostream>
+#include <iomanip>
+#include <fstream>
 
-class Weapon
+class Harl
 {
 	private :
-			std::string _type;
+			void debug();
+			void info();
+			void warning();
+			void error();
 	public :
-		Weapon(std::string type);
-		~Weapon();
-		const std::string &getType() const;
-		void setType(std::string newType);
+			void complain(std::string level);
 };
-
-#endif

@@ -6,9 +6,13 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/22 00:47:24 by abensaid          #+#    #+#             */
-/*   Updated: 2026/04/22 01:07:14 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/04/23 01:25:53 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "Weapon.hpp"
+#include "HumanA.hpp"
+#include "HumanB.hpp"
 
 int main()
 {
@@ -27,5 +31,5 @@ int main()
 		club.setType("some other type of club");
 		jim.attack();
 	}
-return 0;
+	return 0;
 }
