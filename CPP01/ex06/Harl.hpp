@@ -1,19 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   randomChump.cpp                                    :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/08 20:16:14 by abensaid          #+#    #+#             */
-/*   Updated: 2026/04/23 23:52:17 by abensaid         ###   ########.fr       */
+/*   Created: 2026/04/23 22:18:49 by abensaid          #+#    #+#             */
+/*   Updated: 2026/04/23 22:19:19 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
-void	randomChump(std::string name)
+#include <string>
+#include <iostream>
+#include <iomanip>
+#include <fstream>
+
+class Harl
 {
-	Zombie tmp(name);//name = argument quon envoie au constructeur
-	tmp.announce();
-}
+	private :
+			void debug();
+			void info();
+			void warning();
+			void error();
+	public :
+			void complain(std::string level);
+};
