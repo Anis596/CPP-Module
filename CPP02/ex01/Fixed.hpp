@@ -5,27 +5,34 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/24 00:14:53 by abensaid          #+#    #+#             */
-/*   Updated: 2026/04/28 00:43:12 by abensaid         ###   ########.fr       */
+/*   Created: 2026/04/28 01:53:13 by abensaid          #+#    #+#             */
+/*   Updated: 2026/04/28 01:54:04 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <string>
 #include <iostream>
+#include <cmath>
 #include <iomanip>
 
 class Fixed
 {
-	private:
-			int	n;
-			static const int bits;
-	public:
-			Fixed();
-			~Fixed();
-			Fixed(const Fixed &param);
-			Fixed &operator=(const Fixed &param);
-			int getRawBits( void ) const;//const pr garantir que n ne changera pas de valeur
-			void setRawBits( int const raw );//pr modif int n de maniere controler
+    private:
+        int raw;
+        static const int bits = 8;
+    public:
+        Fixed(void);
+        Fixed(const int raw);
+        Fixed(const float raw);
+        Fixed(const Fixed& other);
+        ~Fixed(void);
+
+        int getRawBits(void) const;
+        void setRawBits(int raw);
+        Fixed& operator=(const Fixed& other);
+        int toInt(void) const;
+        float toFloat(void) const;
 };
+
+std::ostream &operator << (std::ostream &i, const Fixed &rhs);
