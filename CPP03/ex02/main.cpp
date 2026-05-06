@@ -6,12 +6,13 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 22:07:11 by abensaid          #+#    #+#             */
-/*   Updated: 2026/05/06 08:11:13 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/05/06 08:22:52 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 //int	main(void)
 //{
