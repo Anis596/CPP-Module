@@ -6,7 +6,7 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/28 22:07:11 by abensaid          #+#    #+#             */
-/*   Updated: 2026/05/06 08:11:13 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/05/07 05:45:15 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,13 @@
 #include "ScavTrap.hpp"
 #include <iostream>
 
-int main()
+int main(void)
 {
 	ClapTrap claptrap("CL4PTP");
 	ScavTrap scavtrap("SC4VTP");
 	std::cout << std::endl;
 	claptrap.attack("hkeromne");
-	scavtrap.attack("jcrochet");
+	scavtrap.attack("to jcrochet");
 	std::cout << std::endl;
 	scavtrap.takeDamage(30);
 	scavtrap.beRepaired(20);

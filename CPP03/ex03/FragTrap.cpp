@@ -6,7 +6,7 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/06 08:18:52 by abensaid          #+#    #+#             */
-/*   Updated: 2026/05/07 01:54:51 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/05/07 05:49:33 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@ FragTrap::FragTrap()
 	_life = 100;
 	_energy = 100;
 	_attack = 30;
-	_name = "Default";
 	std::cout << "A Default FragTrap appeared ! and he will beat fbenech's ass out" << std::endl;
 }
 
@@ -31,13 +30,11 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)//pr eviter le passage par 
 	_life = 100;
 	_energy = 100;
 	_attack = 30;
-	_name = name;
 	std::cout << "FragTrap " << _name << " has been made by the Operation Constructor!" << std::endl;
 }
 
 FragTrap::FragTrap(const FragTrap& src) : ClapTrap(src)//pareil qu'en haut
 {
-	_name = src._name;
 	_life = src._life;
 	_energy = src._energy;
 	_attack = src._attack;
