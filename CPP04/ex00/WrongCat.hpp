@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/07 06:06:35 by abensaid          #+#    #+#             */
-/*   Updated: 2026/05/08 06:39:13 by abensaid         ###   ########.fr       */
+/*   Created: 2026/05/08 07:08:59 by abensaid          #+#    #+#             */
+/*   Updated: 2026/05/08 07:10:06 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-class Cat : public Animal
+class WrongCat : public WrongAnimal
 {
 	public:
-			Cat();
-			virtual ~Cat();
-			Cat(const Cat& src);
-			Cat& operator=(const Cat& src);
-			virtual void makeSound() const;
+			WrongCat();
+			~WrongCat();
+			WrongCat(const WrongCat& src);
+			WrongCat& operator=(const WrongCat& src);
+			void makeSound() const;
 };

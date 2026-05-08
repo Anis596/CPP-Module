@@ -1,44 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Dog.cpp                                            :+:      :+:    :+:   */
+/*   WrongCat.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/07 06:06:32 by abensaid          #+#    #+#             */
-/*   Updated: 2026/05/08 06:38:34 by abensaid         ###   ########.fr       */
+/*   Created: 2026/05/08 07:10:18 by abensaid          #+#    #+#             */
+/*   Updated: 2026/05/08 07:18:13 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-Dog::Dog()
+WrongCat::WrongCat()
 {
-	type = "Dog";
+	type = "WrongCat";
 	std::cout << "Default constructor called " << type << " is created" << std::endl;
 }
 
-Dog::~Dog()
+WrongCat::~WrongCat()
 {
-	std::cout << "Dog " << type << " has been destroyed" << std::endl;
+	std::cout << "The WrongCat " << type << " has been destroyed" << std::endl;
 }
 
-Dog::Dog(const Dog& src) : Animal(src)
+WrongCat::WrongCat(const WrongCat& src) : WrongAnimal(src)
 {
-	std::cout << "Dog copy constructor called : cloning " << type << std::endl;
+	std::cout << "WrongCat copy constructor called : cloning " << type << std::endl;
 }
 
-Dog& Dog::operator=(const Dog& src)
+WrongCat& WrongCat::operator=(const WrongCat& src)
 {
 	if (this != &src)
 	{
-		Animal::operator=(src);
-		std::cout << "Copy Dog assignment operator called" << std::endl;
+		WrongAnimal::operator=(src);
+		std::cout << "Copy WrongCat assignment operator called" << std::endl;
 	}
 	return *this;
 }
 
-void Dog::makeSound() const
+void WrongCat::makeSound() const
 {
-	std::cout << "* Dog barking *" << std::endl;
+	std::cout << "* Undefined WrongCat sound *" << std::endl;
 }

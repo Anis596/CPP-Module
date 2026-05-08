@@ -1,50 +1,50 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/05/07 06:07:00 by abensaid          #+#    #+#             */
-/*   Updated: 2026/05/08 07:05:01 by abensaid         ###   ########.fr       */
+/*   Created: 2026/05/08 07:06:03 by abensaid          #+#    #+#             */
+/*   Updated: 2026/05/08 07:13:19 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "WrongAnimal.hpp"
 
-Animal::Animal()
+WrongAnimal::WrongAnimal()
 {
-	type = "Unknown Animal";
+	type = "Unknown WrongAnimal";
 	std::cout << "Default constructor called " << type << " is created" << std::endl;
 }
 
-Animal::~Animal()
+WrongAnimal::~WrongAnimal()
 {
-	std::cout << "The Animal " << type << " has been destroyed" << std::endl;
+	std::cout << "The WrongAnimal " << type << " has been destroyed" << std::endl;
 }
 
-Animal::Animal(const Animal& src)
+WrongAnimal::WrongAnimal(const WrongAnimal& src)
 {
 	type = src.type;
-	std::cout << "Animal copy constructor called : cloning " << type << std::endl;
+	std::cout << "WrongAnimal copy constructor called : cloning " << type << std::endl;
 }
 
-Animal& Animal::operator=(const Animal& src)
+WrongAnimal& WrongAnimal::operator=(const WrongAnimal& src)
 {
 	if (this != &src)
 	{
 		type = src.type;
-		std::cout << "Copy assignment operator called" << std::endl;
+		std::cout << "Copy WrongAnimal assignment operator called" << std::endl;
 	}
 	return *this;
 }
 
-void Animal::makeSound() const
+void WrongAnimal::makeSound() const
 {
-	std::cout << "* Undefined animal sound *" << std::endl;
+	std::cout << "* Undefined WrongAnimal sound *" << std::endl;
 }
 
-std::string Animal::getType() const
+std::string WrongAnimal::getType() const
 {
 	return type;
 }
