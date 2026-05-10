@@ -6,7 +6,7 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/07 06:06:26 by abensaid          #+#    #+#             */
-/*   Updated: 2026/05/08 07:23:59 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/05/10 00:26:30 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 
-int main()
+int main(void)
 {
 	std::cout << "--- TEST DES BONS ANIMAUX (POLYMORPHISME) ---" << std::endl;
 	const Animal* meta = new Animal();
