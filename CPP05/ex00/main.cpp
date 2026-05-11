@@ -6,7 +6,13 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 03:25:05 by abensaid          #+#    #+#             */
-/*   Updated: 2026/05/10 03:25:06 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/05/11 06:07:51 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "Bureaucrat.hpp"
+
+int	main(void)
+{
+	
+}
