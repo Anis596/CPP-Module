@@ -6,11 +6,12 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 03:25:10 by abensaid          #+#    #+#             */
-/*   Updated: 2026/05/13 05:22:23 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/05/13 07:28:45 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat() : _name("Default PussyClat"), _grade(150)
 {
@@ -82,4 +83,17 @@ std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj)
 {
 	os << obj.getName() << ", bureaucrat grade " << obj.getGrade() << ".";
 	return os;
+}
+
+void Bureaucrat::signForm(Form& f)
+{
+	try
+	{
+		f.beSigned(*this);
+		std::cout << _name << " signed " << f.getName() << std::endl;
+	}
+	catch(const std::exception& e)
+	{
+		std::cout << _name << " couldn't sign " << f.getName() << " because " << e.what() << std::endl;
+	}
 }

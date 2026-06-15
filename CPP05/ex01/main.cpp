@@ -6,63 +6,51 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/05/10 03:25:05 by abensaid          #+#    #+#             */
-/*   Updated: 2026/05/13 05:54:37 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/05/16 03:41:26 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
-int	main(void)
+int main(void)
 {
+	std::cout << "--- TEST 1: Creating forms with invalid grades ---" << std::endl;
 	try
 	{
-		Bureaucrat stevebonda("steve", 2);
-		std::cout << stevebonda << std::endl;
-		stevebonda.incrementGrade();
-		std::cout << stevebonda << std::endl;
-		stevebonda.incrementGrade();
-		std::cout << stevebonda << std::endl;
+		Form impossible("ImpossibleForm", 0, 50);
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+		std::cerr << "Creation error: " << e.what() << '\n';
 	}
 	try
 	{
-		Bureaucrat jacem("jagharra", 149);
-		std::cout << jacem << std::endl;
-		jacem.decrementGrade();
-		std::cout << jacem << std::endl;
-		jacem.decrementGrade();
-		std::cout << jacem << std::endl;
+		Form useless("UselessForm", 50, 200);
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
+	std::cerr << "Creation error: " << e.what() << '\n';
 	}
+	std::cout << "\n--- TEST 2: Signature, Demotion, and Failure ---" << std::endl;
 	try
 	{
-		Bureaucrat fail("Fail", 200);
+		Bureaucrat yassine("Yassine", 50);
+		Form taxReturn("Tax Return", 50, 50);
+		Form propertyTax("Property Tax", 50, 50);
+		std::cout << yassine << std::endl;
+		std::cout << taxReturn << std::endl;
+		yassine.signForm(taxReturn);
+		std::cout << taxReturn << std::endl;
+		std::cout << "\n-- Demoting Yassine --" << std::endl;
+		yassine.decrementGrade();
+		std::cout << yassine << std::endl;
+		yassine.signForm(propertyTax);
+		std::cout << propertyTax << std::endl;
 	}
 	catch(const std::exception& e)
 	{
-		std::cerr << e.what() << '\n';
-	}
-	try
-	{
-		Bureaucrat fail2("Fail2", 0);
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}
-	try
-	{
-		Bureaucrat jamel;
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
+		std::cerr << "Unexpected exception: " << e.what() << '\n';
 	}
 	return 0;
 }
