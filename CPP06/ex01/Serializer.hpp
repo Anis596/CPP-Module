@@ -6,7 +6,7 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/25 20:41:25 by abensaid          #+#    #+#             */
-/*   Updated: 2026/06/26 00:39:29 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/06/26 19:47:19 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 #include <ctime>
 #include <cstdlib>
 #include <limits>
+#include <stdint.h>
 
 struct Data
 {

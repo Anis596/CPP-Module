@@ -6,7 +6,7 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/06/23 14:41:08 by abensaid          #+#    #+#             */
-/*   Updated: 2026/06/25 20:39:56 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/06/26 19:22:22 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,8 @@ void	ScalarConverter::convert(std::string str)
 	if (isChar(str))
 	{
 		char c = str[0];
-		int i = static_cast<int>(c);
-		float f = static_cast<float>(c);
+		int i = static_cast<int>(c);//i = variable qui va stocker
+		float f = static_cast<float>(c);//on recupere les infos du char et on les met dans float
 		double d = static_cast<double>(c);
 		std::cout << "char: '" << c << "'" << std::endl;
 		std::cout << "int: " << i << std::endl;

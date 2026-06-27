@@ -1,23 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Serializer.cpp                                     :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/06/25 20:41:27 by abensaid          #+#    #+#             */
-/*   Updated: 2026/06/26 19:22:06 by abensaid         ###   ########.fr       */
+/*   Created: 2026/06/26 19:56:45 by abensaid          #+#    #+#             */
+/*   Updated: 2026/06/26 20:06:26 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serializer.hpp"
+#include "Base.hpp"
 
-uintptr_t Serializer::serialize(Data* ptr)
+int	main()
 {
-	return reinterpret_cast<uintptr_t>(ptr);
-}
-
-Data* Serializer::deserialize(uintptr_t raw)
-{
-	return reinterpret_cast<Data*>(raw);
 }

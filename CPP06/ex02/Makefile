@@ -1,10 +1,10 @@
-NAME        = Serialization
+NAME        = Base
 CXX         = c++
 CXXFLAGS    = -Wall -Wextra -Werror -std=c++98
 RM          = rm -f
 
 SRCS        = main.cpp \
-			  Serializer.cpp 
+			  Base.cpp 
 
 OBJS        = $(SRCS:.cpp=.o)
 
