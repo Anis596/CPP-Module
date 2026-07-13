@@ -1,26 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Pmerge.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/07 05:24:43 by abensaid          #+#    #+#             */
-/*   Updated: 2026/07/09 09:47:48 by abensaid         ###   ########.fr       */
+/*   Created: 2026/07/13 09:27:02 by abensaid          #+#    #+#             */
+/*   Updated: 2026/07/13 09:41:14 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "BitcoinExchange.hpp"
+#pragma once
 
-int	main(int ac, char **av)
+#include <string>
+#include <fstream>
+#include <iostream>
+#include <iomanip>
+#include <ctime>
+#include <cstdlib>
+#include <limits>
+#include <stdint.h>
+#include <exception>
+#include <algorithm>
+#include <vector>
+#include <stdexcept>
+#include <stack>
+#include <deque>
+#include <list>
+#include <map>
+#include <sstream>
+
+class Pmerge
 {
-	if (ac != 2)
-	{
-		std::cout << "Wrong number of arguments" << "\n";
-		return 1;
-	}
-	BitcoinExchange btc;
-	btc.loadDatabase("data/data.csv");
-	btc.check_input(av[1]);
-	return 0;
-}
+	private:
+
+	public:
+		
+};

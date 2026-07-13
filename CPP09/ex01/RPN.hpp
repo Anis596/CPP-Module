@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   BitcoinExchange.hpp                                :+:      :+:    :+:   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/07 05:24:40 by abensaid          #+#    #+#             */
-/*   Updated: 2026/07/12 01:01:44 by abensaid         ###   ########.fr       */
+/*   Created: 2026/07/09 09:55:59 by abensaid          #+#    #+#             */
+/*   Updated: 2026/07/13 07:30:54 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,17 +30,15 @@
 #include <map>
 #include <sstream>
 
-class BitcoinExchange
+class RPN
 {
 	private:
-		std::map<std::string, float> _database;//1er argument = key (la date) donc ou aller chercher, 2e arg = valeur le prix
+		std::stack<long> containers;
 	public:
-		BitcoinExchange();
-		~BitcoinExchange();
-		BitcoinExchange(const BitcoinExchange& other);
-		BitcoinExchange& operator=(const BitcoinExchange& other);
-		void loadDatabase(std::string const& filename);
-		void check_input(std::string const& filename);
-		bool isValidDate(const std::string& date);
-		bool isValidValue(float value) const;
+		RPN();
+		~RPN();
+		RPN(const RPN& other);
+		RPN& operator=(const RPN& other);
+		void calculate(const std::string& expression);
+		bool isOperator(char c);
 };
