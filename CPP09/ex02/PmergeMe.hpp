@@ -6,7 +6,7 @@
 /*   By: abensaid <abensaid@student.42lehavre.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/13 09:27:02 by abensaid          #+#    #+#             */
-/*   Updated: 2026/07/14 02:43:31 by abensaid         ###   ########.fr       */
+/*   Updated: 2026/07/16 07:11:35 by abensaid         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,8 @@ class PmergeMe
 		PmergeMe &operator=(const PmergeMe &other);
 		void parse(int ac, char **av);//verif des chiffres positifs remplit deq et vect avec
 		void printSequence(const std::string& msg) const;//afficher le msg Before: et After:
+		void mergeSort(std::vector< std::pair<int, int> >& tab);//prend le vecteur de pairs et met les gagnants ds lordre
+		void mergeSort(std::deque< std::pair<int, int> >& tab);
 		void sortVector();//logique de tri pr vector
 		void sortDeque();//logique de tri pr deque
 		size_t jacobSthal(size_t n);
